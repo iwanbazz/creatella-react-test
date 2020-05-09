@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useHistory } from "react-router-dom";
+import { LIMIT } from "./common/config";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
