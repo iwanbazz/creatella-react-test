@@ -5,10 +5,11 @@
   "description": "Build a grid of product items and ads",
   "main": "server/index.js",
   "scripts": {
-    "start": "json-server server/index.js --routes server/routes.json --middlewares server/handle-delay.js server/handle-ads.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"webpack-dev-server --open --hot --mode development\" \"json-server server/index.js --routes server/routes.json --middlewares server/handle-delay.js server/handle-ads.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
-  "author": "",
+  "author": "iwanbazz",
   "license": "",
   "dependencies": {
     "axios": "^0.19.2",
@@ -19,6 +20,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
