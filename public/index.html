@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Products Grid</title>
-    </head>
-    <body>
-        <header>
-            <h1>Products Grid</h1>
-
-            <p>Here you're sure to find a bargain on some of the finest ascii available to purchase. Be sure to peruse our selection of ascii faces in an exciting range of sizes and prices.</p>
-
-            <p>But first, a word from our sponsors:</p> <script>document.write('<img class="ad" src="/ads/?r=' + Math.floor(Math.random()*1000) + '"/>');</script>
-        </header>
-
-        <section class="products">
-            ... products go here ...
-        </section>
-    </body>
+  <head>
+    <title>Products Grid</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container d-flex justify-content-between">
+          <a class="navbar-brand" href="/">
+            <span>Products Grid</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <p class="lead">
+          Here you're sure to find a bargain on some of the finest ascii
+          available to purchase. Be sure to peruse our selection of ascii faces
+          in an exciting range of sizes and prices.
+        </p>
+      </div>
+      <div class="container">
+        <p>But first, a word from our sponsors:</p>
+        <script>
+          document.write(
+            '<img class="ad" src="/ads/?r=' +
+              Math.floor(Math.random() * 1000) +
+              '"/>'
+          );
+        </script>
+      </div>
+    </section>
+    <section class="products">
+      ... products go here ...
+    </section>
+  </body>
 </html>
