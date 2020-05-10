@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useHistory } from "react-router-dom";
+import "./styles/index.scss";
+import ProductList from "./components/ProductList";
+import Loading from "./components/Loading";
+import {
+  loadProducts,
+  incrementPage,
+  sortProducts,
+  setIsSorted,
+} from "./redux/actions";
 import { LIMIT } from "./common/config";
 
 function useQuery() {
@@ -8,20 +17,20 @@ function useQuery() {
 }
 
 function App() {
-  const dispatch = useDispatch();
-  const query = useQuery();
-  const history = useHistory();
   const [sort, setSort] = useState(
     query.get("sortBy") ? query.get("sortBy") : ""
   );
+  const dispatch = useDispatch();
+  const history = useHistory();
   const isLoading = useSelector((state) => state.product.isLoading);
-  const products = useSelector((state) => state.product.products);
-  const page = useSelector((state) => state.product.page);
-  const total = useSelector((state) => state.product.productCount);
   const isSorted = useSelector((state) => state.product.isSorted);
   const isSortingLoading = useSelector(
     (state) => state.product.isSortingLoading
   );
+  const page = useSelector((state) => state.product.page);
+  const products = useSelector((state) => state.product.products);
+  const query = useQuery();
+  const total = useSelector((state) => state.product.productCount);
 
   useEffect(() => {
     if (!isSorted) {
@@ -94,6 +103,7 @@ function App() {
           </div>
         </div>
         {isSortingLoading && <Loading />}
+        {products && !isSortingLoading && <ProductList products={products} />}
         {isLoading && <Loading />}
         {!isLoading && product.lenght === total && (
           <div className="text-center">
