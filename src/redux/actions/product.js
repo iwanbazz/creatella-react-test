@@ -1,43 +1,22 @@
 import {
-  SET_LOADING,
-  SET_ERROR,
-  SET_PRODUCTS,
-  SET_PRODUCT_SORTED,
-  SET_IS_SORTING_LOADING,
-  SET_TOTAL_PRODUCTS,
-  SET_IS_SORTED,
-  SET_PREVIOUS_ADS_ID,
   INCREMENT_PAGE,
+  SET_ERROR,
+  SET_IS_SORTED,
+  SET_IS_SORTING_LOADING,
+  SET_LOADING,
+  SET_PREVIOUS_ADS_ID,
+  SET_PRODUCT_SORTED,
+  SET_PRODUCTS,
+  SET_TOTAL_PRODUCTS,
 } from "./types";
 import api from "../../common/api";
 
-const setLoading = (value) => ({
-  type: SET_LOADING,
-  payload: value,
+export const incrementPage = () => ({
+  type: INCREMENT_PAGE,
 });
 
-const setError = (value) => ({
+export const setError = (value) => ({
   type: SET_ERROR,
-  payload: value,
-});
-
-const setProducts = (value) => ({
-  type: SET_PRODUCTS,
-  payload: value,
-});
-
-const setProductSorted = (value) => ({
-  type: SET_PRODUCT_SORTED,
-  payload: value,
-});
-
-const setIsSortingLoading = (value) => ({
-  type: SET_IS_SORTING_LOADING,
-  payload: value,
-});
-
-const setTotalProducts = (value) => ({
-  type: SET_TOTAL_PRODUCTS,
   payload: value,
 });
 
@@ -46,13 +25,34 @@ export const setIsSorted = (value) => ({
   payload: value,
 });
 
+export const setIsSortingLoading = (value) => ({
+  type: SET_IS_SORTING_LOADING,
+  payload: value,
+});
+
+export const setLoading = (value) => ({
+  type: SET_LOADING,
+  payload: value,
+});
+
 export const setPreviousAdsId = (value) => ({
   type: SET_PREVIOUS_ADS_ID,
   payload: value,
 });
 
-export const incrementPage = () => ({
-  type: INCREMENT_PAGE,
+export const setProductSorted = (value) => ({
+  type: SET_PRODUCT_SORTED,
+  payload: value,
+});
+
+export const setProducts = (value) => ({
+  type: SET_PRODUCTS,
+  payload: value,
+});
+
+export const setTotalProducts = (value) => ({
+  type: SET_TOTAL_PRODUCTS,
+  payload: value,
 });
 
 export const loadProducts = (params) => (dispatch) => {
