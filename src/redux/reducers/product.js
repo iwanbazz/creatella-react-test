@@ -1,3 +1,7 @@
+{
+  /* Declare state action that handle with redux */
+}
+
 import {
   INCREMENT_PAGE,
   SET_ERROR,

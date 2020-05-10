@@ -1,3 +1,7 @@
+{
+  /* Component to manipulate how ads should be display */
+}
+
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { generateRandomNumbers } from "../common/utils";

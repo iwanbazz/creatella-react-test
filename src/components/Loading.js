@@ -1,3 +1,7 @@
+{
+  /* Component that handle loading in between 20 ascii face */
+}
+
 import React from "react";
 
 function Loading() {

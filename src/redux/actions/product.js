@@ -1,3 +1,7 @@
+{
+  /* Declare every redux state condition */
+}
+
 import {
   INCREMENT_PAGE,
   SET_ERROR,

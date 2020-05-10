@@ -1,3 +1,7 @@
+{
+  /* Export every redux state condition */
+}
+
 export const INCREMENT_PAGE = "INCREMENT_PAGE";
 export const SET_ERROR = "SET_ERROR";
 export const SET_IS_SORTED = "SET_IS_SORTED";

@@ -1,8 +1,22 @@
+{
+  /*
+    Some utility variable.
+    formatCurrency: convert price to $.
+    parseDateIntoRelativeTime: Utility to change date view.
+    generateRandomNumbers: Randomize ascii face number.
+  */
+}
+
 export const formatCurrency = (price) => {
-  return price.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
+  return price
+    .toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 0,
+    })
+    .toString()
+    .split(/(?=(?:\d{2})+(?:\.|$))/g)
+    .join(",");
 };
 
 export const parseDateIntoRelativeTime = (dateAdded) => {

@@ -45,11 +45,14 @@ function App() {
     }
   }, [isSorted]);
 
+  {
+    /* Below here is handle view onScroll */
+  }
   window.onscroll = () => {
     if (
       products.length < total &&
       window.innerHeight + document.documentElement.scrollTop ===
-      document.documentElement.offsetHeight
+        document.documentElement.offsetHeight
     ) {
       if (!isLoading && !isSortingLoading) {
         dispatch(incrementPage());

@@ -1,3 +1,7 @@
+{
+  /* Component that handle every single ascii face item */
+}
+
 import React, { Fragment } from "react";
 import { formatCurrency, parseDateIntoRelativeTime } from "../common/utils";
 import Ads from "./Ads";

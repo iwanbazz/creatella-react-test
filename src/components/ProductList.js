@@ -1,3 +1,7 @@
+{
+  /* Component that mapping ascii face item into grid */
+}
+
 import React from "react";
 import Product from "./Product";
 
