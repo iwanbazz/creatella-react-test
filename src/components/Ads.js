@@ -21,7 +21,7 @@ function Ads() {
 
   return (
     <div className="col-md-12 text-center ads">
-      {loadingAds && <div>Loading ...</div>}
+      {loadingAds && <div>Loading...</div>}
       {!loadingAds && adsId && <img src={BASE_URL + "ads/?r=" + adsId} />}
     </div>
   );
