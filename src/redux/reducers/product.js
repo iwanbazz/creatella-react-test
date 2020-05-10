@@ -26,7 +26,7 @@ export default function (state = initialState, action) {
     case INCREMENT_PAGE:
       return {
         ...state,
-        isLoading: action.payload,
+        page: state.page + 1,
       };
     case SET_ERROR:
       return {

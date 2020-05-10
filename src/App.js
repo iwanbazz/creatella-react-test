@@ -17,6 +17,7 @@ function useQuery() {
 }
 
 function App() {
+  const query = useQuery();
   const [sort, setSort] = useState(
     query.get("sortBy") ? query.get("sortBy") : ""
   );
@@ -29,7 +30,6 @@ function App() {
   );
   const page = useSelector((state) => state.product.page);
   const products = useSelector((state) => state.product.products);
-  const query = useQuery();
   const total = useSelector((state) => state.product.productCount);
 
   useEffect(() => {
@@ -47,9 +47,9 @@ function App() {
 
   window.onscroll = () => {
     if (
-      products.leght < total &&
+      products.length < total &&
       window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
+      document.documentElement.offsetHeight
     ) {
       if (!isLoading && !isSortingLoading) {
         dispatch(incrementPage());
@@ -79,7 +79,7 @@ function App() {
             Sort by
           </label>
           <div className="col-md-3">
-            <div className="produsct-sort">
+            <div className="product-sort">
               <select
                 defaultValue={sort}
                 onChange={(e) => handleSelectSorting(e)}
@@ -105,7 +105,7 @@ function App() {
         {isSortingLoading && <Loading />}
         {products && !isSortingLoading && <ProductList products={products} />}
         {isLoading && <Loading />}
-        {!isLoading && product.lenght === total && (
+        {!isLoading && products.length === total && (
           <div className="text-center">
             <p className="lead text-muted">~ end of catalogue ~</p>
           </div>
