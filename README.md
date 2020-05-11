@@ -1,4 +1,11 @@
-Products Grid
+# Installation
+====
+
+To run this project just `clone` this repo, `cd` to your cloned folder, `npm install`, then `npm start`.
+I've change default port of webpack from 8080 to 2020 because i love the year 2020, so you can access it at `localhost:2020`.
+It is bad practice to use such a port 2020, but it just dev env anyway.
+
+# Products Grid
 ====
 
 This is an ecommerce site, where you can buy all sorts of ascii faces like `(ノ・∀・)ノ` and `¯_(ツ)_/¯`, in a wide variety of font sizes. The homepage should display a list of products for people to browse.
